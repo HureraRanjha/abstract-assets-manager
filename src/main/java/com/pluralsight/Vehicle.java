@@ -16,6 +16,36 @@ public class Vehicle extends Asset
         this.odometer = odometer;
     }
 
+    public String getMakeModel()
+    {
+        return makeModel;
+    }
+
+    public void setMakeModel(String makeModel)
+    {
+        this.makeModel = makeModel;
+    }
+
+    public int getYear()
+    {
+        return year;
+    }
+
+    public void setYear(int year)
+    {
+        this.year = year;
+    }
+
+    public int getOdometer()
+    {
+        return odometer;
+    }
+
+    public void setOdometer(int odometer)
+    {
+        this.odometer = odometer;
+    }
+
     @Override
     public double getValue()
     {
@@ -24,6 +54,7 @@ public class Vehicle extends Asset
         int calcYear = currentYear - year;
         double reducedCostPercent = 0;
         double reducedCost = 0;
+
         if(calcYear >= 0 && calcYear <= 3)  reducedCostPercent = 0.03;
         else if (calcYear < 7) reducedCostPercent = 0.06;
         else if (calcYear < 11) reducedCostPercent = 0.08;
