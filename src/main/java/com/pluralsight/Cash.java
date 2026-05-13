@@ -1,6 +1,6 @@
 package com.pluralsight;
 
-public abstract class Cash extends Asset
+public class Cash extends Asset
 {
     double cash;
 
@@ -10,5 +10,8 @@ public abstract class Cash extends Asset
         this.cash = cash;
     }
 
-    abstract public double getValue();
+    public double getValue()
+    {
+        return this.cash;
+    }
 }
